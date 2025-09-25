@@ -2,7 +2,7 @@ from django.shortcuts import render,HttpResponse
 from django.http import HttpResponse
 
 def bloghome(request):
-    return HttpResponse("Hola desde la vista homepage")
+    return render(request,'blog/bloghome.html')
 
 def blogpost(request, slug):
-    return HttpResponse(f"Hola desde mi  blogpost:{slug}")
+    return render(request,'blog/blogpost.html')
