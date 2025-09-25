@@ -5,10 +5,10 @@ def home(request):
     return render(request, 'home/home.html')
 def contact(request):
     if request. method=="POST":
-        name=request.POST['name']
-        email=request.POST['email']
-        phone=request.POST['phone']
-        content=request.POST['content']
+        name=request.POST.get('name')        
+        email=request.POST.get('email')
+        phone=request.POST.get('phone')
+        content=request.POST.get('content')
         print(name,email,phone,content)
     return render(request,'home/contact.html')
 def about(request):
